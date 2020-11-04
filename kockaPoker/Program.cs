@@ -12,7 +12,7 @@ namespace kockaPoker
         {
             Dobas d = new Dobas(1, 1, 1, 1, 1);
 
-            d.EgyDobas();
+            d.EgyDobas();//Ha kikommentelem, a fenső tömb adatait nézi.
             d.Kiiras();
             Console.WriteLine(d.Erteke());
 
