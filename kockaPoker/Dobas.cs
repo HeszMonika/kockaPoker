@@ -53,7 +53,7 @@ namespace kockaPoker
             {
                 Console.Write($"{k} ");
             }
-            Console.WriteLine($" -> {eredmeny}");
+            Console.WriteLine($"-> {eredmeny}");
         }
 
 
