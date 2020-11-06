@@ -45,7 +45,7 @@ namespace Kockapoker
 
         public void EgyDobas()
         {
-            Random vel = new Random();
+            Random vel = new Random(Guid.NewGuid().GetHashCode());
             for (int i = 0; i < kockak.Length; i++)
             {
                 kockak[i] = vel.Next(1, 7);
