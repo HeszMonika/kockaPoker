@@ -1,49 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace kockaPoker
+namespace Kockapoker
 {
     class Program
     {
         static void Ellenorzes()
         {
-            StreamReader sr = new StreamReader("teszteles.txt");
-            while (!sr.EndOfStream)
+            StreamReader be = new StreamReader("teszteles.txt");
+            while (!be.EndOfStream)
             {
-                string[] a = sr.ReadLine().Split(',');
+                string[] a = be.ReadLine().Split(',');
+
                 List<int> sz = a.Select(x => int.Parse(x)).ToList();
-                //Végigmegy az "a" tömbbön, egész értéket csinál az elemekból, majd beleteszi az "sz" változóba.
 
                 Dobas d = new Dobas(sz[0], sz[1], sz[2], sz[3], sz[4]);
+
                 d.Kiiras();
             }
-            sr.Close();
+            be.Close();
         }
 
 
         static void Main(string[] args)
         {
-            //Dobas d = new Dobas();//Ha számokat adok meg és a d.EgyDobas-t kokommentelem, ezeket az adatoat nézi.
-
-            //d.EgyDobas();//Ha kikommentelem, a fenső tömb adatait nézi.
-            //d.Kiiras();
-
             //Ellenorzes();
+
+            //Dobas p = new Dobas(2, 2, 6, 1, 6);
+            //p.Kiiras();
 
             Dobas gep = new Dobas();
             Dobas ember = new Dobas();
 
+            Console.Write("Gép: ");
             gep.EgyDobas();
-            ember.EgyDobas();
-
             gep.Kiiras();
+
+            Console.Write("Ember: ");
+            ember.EgyDobas();
             ember.Kiiras();
 
-            Console.ReadKey();
+            if (gep.Pont > ember.Pont)
+            {
+                Console.WriteLine("A gép nyert.");
+            }
+            else if (ember.Pont > gep.Pont)
+            {
+                Console.WriteLine("Az ember nyert.");
+            }
+            else
+            {
+                Console.WriteLine("Döntetlen.");
+            }
+
+
+            Console.ReadLine();
         }
     }
 }

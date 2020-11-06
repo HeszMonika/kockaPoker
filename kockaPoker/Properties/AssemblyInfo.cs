@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("kockaPoker")]
+[assembly: AssemblyTitle("Kockapoker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("kockaPoker")]
+[assembly: AssemblyProduct("Kockapoker")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("842f6dbe-af79-48eb-8ab6-7bcedb94a60c")]
+[assembly: Guid("00b9d279-e4b7-4f33-ab8f-c4e3ff5a524c")]
 
 // Version information for an assembly consists of the following four values:
 //
